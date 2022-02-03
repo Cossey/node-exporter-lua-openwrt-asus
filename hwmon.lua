@@ -26,6 +26,7 @@ local function process_chip(chip)
 end
 
 local function scrape()
+    chip_counter = {}
     local folders = scandir("/sys/class/hwmon/")
 
     for _, folder in ipairs(folders) do
